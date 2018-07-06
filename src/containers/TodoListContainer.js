@@ -20,9 +20,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                 input.focus();
             }
         },
-        onTodoClick: (e) => {
-            if (e !== "") {
-                dispatch(todoRemove(e))
+        onTodoClick: (key) => {
+            if (key !== "") {
+                dispatch(todoRemove(key))
             }
         }
     };
