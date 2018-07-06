@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import FlipMove from "react-flip-move";
 
+
+/* Using functional component */
 const TodoListItems = ({items, onTodoClick}) => {
 
     const createTasks = (item) => (<li onClick={ (e)=>onTodoClick(item.key) }  key={item.key}>{item.text}</li>);
