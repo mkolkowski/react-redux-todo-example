@@ -5,9 +5,10 @@ import { todoAdd, todoRemove } from '../actions'
 import TodoList from '../components/TodoList'
 
 const mapStateToProps = (state, ownProps) => {
-    return Object.assign({}, state.todoReductor, {
+    return {
+        items: state.todoReductor.items,
         maxTodos: ownProps.maxTodos
-    });
+    };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

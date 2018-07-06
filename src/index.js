@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-import TodoListContainer from "./containers/TodoListContainer";
+import WorkingTodoList from "./containers/WorkingTodoList";
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -15,7 +15,7 @@ var destination = document.querySelector("#container");
 ReactDOM.render(
     <Provider store={store}>
         <div>
-            <TodoListContainer maxTodos={5} />
+            <WorkingTodoList maxTodos={5} />
         </div>
     </Provider>,
     destination

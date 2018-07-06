@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import FlipMove from "react-flip-move";
 import PropTypes from 'prop-types';
 
+const TodoListItems = (props) => {
 
-/* Using functional component */
-const TodoListItems = ({items, onTodoClick}) => {
-
-    const createTasks = (item) => (<li onClick={ (e)=>onTodoClick(item.key) }  key={item.key}>{item.text}</li>);
-
-    var listItems = items.map(createTasks);
+    const createTasks = (item) => (<li onClick={ (e)=>props.onTodoClick(item.key) }  key={item.key}>{item.text}</li>);
+    
+    var listItems = props.items.map(createTasks);
 
     return (
         <ul className="theList">
