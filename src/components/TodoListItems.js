@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FlipMove from "react-flip-move";
+import PropTypes from 'prop-types';
 
 
 /* Using functional component */
@@ -17,5 +18,14 @@ const TodoListItems = ({items, onTodoClick}) => {
         </ul>
     );
 }
+
+
+TodoListItems.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+        key : PropTypes.string.isRequired,
+        text : PropTypes.string.isRequired
+    })).isRequired,
+    onTodoClick: PropTypes.func.isRequired
+};
 
 export default TodoListItems;

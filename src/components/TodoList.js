@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 import "../TodoList.css";
 import "../TodoProgress.css";
@@ -25,5 +26,11 @@ const TodoList = ({ maxTodos, onSubmit, onTodoClick }) => (
         <TodoListItemsContainer onTodoClick={onTodoClick} />
     </div>
 );
+
+TodoList.propTypes = {
+    maxTodos : PropTypes.number.isRequired,
+    onSubmit : PropTypes.func.isRequired,
+    onTodoClick : PropTypes.func.isRequired
+};
 
 export default TodoList

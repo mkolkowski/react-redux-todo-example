@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from 'prop-types';
 
 /* Using class component */
 class TodoListProgress extends React.Component {
@@ -19,6 +19,10 @@ class TodoListProgress extends React.Component {
     }
 }
 
+TodoListProgress.propTypes = {
+    currentValue: PropTypes.number.isRequired,
+    maxValue: PropTypes.number.isRequired
+};
 
 // Same like that:
 // const TodoListProgress = ({ currentValue, maxValue }) => {
@@ -34,3 +38,5 @@ class TodoListProgress extends React.Component {
 // }
 
 export default TodoListProgress;
+
+
